@@ -1,0 +1,60 @@
+
+@api = http://localhost:5000
+###
+
+### User Requests 
+
+### register user
+POST {{api}}/api/signup
+Content-Type: application/json
+
+{
+    "name": "Bryan",
+    "lastname": "Cirelly",
+    "email": "cirellybryan@gmail.com",
+    "password": "123456",
+    "repeatPassword": "123456"
+}
+
+### Login user validating access token and refresh token
+POST {{api}}/api/signin
+Content-Type: application/json
+
+{
+    "email": "cirelly@gmail.com",
+    "password": "undeclan2"
+}
+
+
+### refresh token
+POST {{api}}/api/refresh-access-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmYjZmM2IyNWRiM2FmODQ3MDQ5ZmQzMyIsImV4cCI6MTYwODg0MTk5MX0.lT0hyOaluA8fex3G9O07iWoQbzD4EpARklhVqBXnSuM"
+}
+
+
+### get users
+GET {{api}}/api/users-active?active=false
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmYjZmM2IyNWRiM2FmODQ3MDQ5ZmQzMyIsImVtYWlsIjoiY2lyZWxseUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJjcmVhdGVUb2tlbiI6MTYwNjM0ODc4NywiZXhwIjoxNjA2MzU5NTg3fQ.vqX-RR4ldyU9nOGrq2k0EpYiisH7BstCAy2uaAZzob4
+
+
+
+### upload avatar
+PUT {{api}}/api/upload-avatar/5fb6f3b25db3af847049fd33
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmYjZmM2IyNWRiM2FmODQ3MDQ5ZmQzMyIsImV4cCI6MTYwOTM3MTY4NX0.pY-gy4BzyBdelOGrhdXIL5Ka32XAhksBoXMRPvv9-eI
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="avatar"
+
+title
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="avatar"; filename="logo-white.png"
+Content-Type: image/png
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmYjZmM2IyNWRiM2FmODQ3MDQ5ZmQzMyIsImV4cCI6MTYwOTM3MTY4NX0.pY-gy4BzyBdelOGrhdXIL5Ka32XAhksBoXMRPvv9-eI
+
+< ./web-personal/client/src/assets/img/png/logo-white.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
