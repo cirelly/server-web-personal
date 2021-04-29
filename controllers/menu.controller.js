@@ -52,7 +52,7 @@ function updateMenuOrder(req, res){
 function activateMenu(req, res){
     let {id} = req.params;
     const {active} = req.body;
-
+    
     Menu.findByIdAndUpdate(id, {active}, (err, menuUpdated)  =>{
         if(err){
             res.status(500).send({message: "Server Error."})

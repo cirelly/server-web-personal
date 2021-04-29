@@ -86,3 +86,13 @@ Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmYjZmM2IyNWRiM2Fm
 {
     "order": 6
 }
+
+
+### update menu status
+PUT  {{api}}/api/activate-menu/607292daec672420801b1d78
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmYjZmM2IyNWRiM2FmODQ3MDQ5ZmQzMyIsIm5hbWUiOiJCcnlhbiIsImxhc3RuYW1lIjoiQ2lyZWxseSIsImVtYWlsIjoiY2lyZWxseUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJjcmVhdGVUb2tlbiI6MTYxOTY2MzkyNSwiZXhwIjoxNjE5Njc0NzI1fQ.eC7cjZssZZMJA-W7PyKE-u-BFc_B_63A021LgsBdnZs
+
+{
+    "active": true
+}
