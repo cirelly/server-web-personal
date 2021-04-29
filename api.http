@@ -58,3 +58,31 @@ Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmYjZmM2IyNWRiM2Fm
 
 < ./web-personal/client/src/assets/img/png/logo-white.png
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+###GET MENUS
+GET {{api}}/api/get-menus
+Content-Type: application/json
+
+
+###Create MENU
+POST {{api}}/api/add-menu
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmYjZmM2IyNWRiM2FmODQ3MDQ5ZmQzMyIsIm5hbWUiOiJCcnlhbiIsImxhc3RuYW1lIjoiQ2lyZWxseSIsImVtYWlsIjoiY2lyZWxseUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJjcmVhdGVUb2tlbiI6MTYxODE3MDY4OSwiZXhwIjoxNjE4MTgxNDg5fQ.8RcElXMWZlgXtpxmKjz-dTFk8M7TRvUvdXWOGpuhSjk
+
+{
+    "title": "ant@gmail.com",
+    "url": "https://ant.design/components/icon/7",
+    "order": 3,
+    "active": true
+
+}
+
+###update menu oorder
+PUT  {{api}}/api/update-menu/607292daec672420801b1d78
+Content-Type: application/json
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmYjZmM2IyNWRiM2FmODQ3MDQ5ZmQzMyIsIm5hbWUiOiJCcnlhbiIsImxhc3RuYW1lIjoiQ2lyZWxseSIsImVtYWlsIjoiY2lyZWxseUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJjcmVhdGVUb2tlbiI6MTYxODE3MDY4OSwiZXhwIjoxNjE4MTgxNDg5fQ.8RcElXMWZlgXtpxmKjz-dTFk8M7TRvUvdXWOGpuhSjk
+
+{
+    "order": 6
+}

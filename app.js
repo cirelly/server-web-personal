@@ -6,7 +6,7 @@ const app = express();
 //Load routings
 const authRoutes = require('./routes/auth.routes')
 const userRoutes = require('./routes/user.routes')
-
+const menuRoutes = require('./routes/menu.routes');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
@@ -27,6 +27,6 @@ app.use((req, res, next) => {
 //Basic Routes
 app.use(`/api/`, authRoutes)
 app.use(`/api`, userRoutes)
-
+app.use('/api', menuRoutes)
 
 module.exports = app;
