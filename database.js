@@ -5,7 +5,7 @@ const mongooseOptions = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: true
+    useFindAndModify: false
 }
 mongoose.connect(MONGO_URI, mongooseOptions)
     .then(db => console.log("Database is connected!"))
