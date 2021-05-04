@@ -7,6 +7,9 @@ const app = express();
 const authRoutes = require('./routes/auth.routes')
 const userRoutes = require('./routes/user.routes')
 const menuRoutes = require('./routes/menu.routes');
+const newsletterRoutes = require('./routes/newsletter.routes')
+const courseRoutes = require('./routes/course.routes')
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
@@ -28,5 +31,6 @@ app.use((req, res, next) => {
 app.use(`/api/`, authRoutes)
 app.use(`/api`, userRoutes)
 app.use('/api', menuRoutes)
-
+app.use('/api', newsletterRoutes)
+app.use('/api', courseRoutes)
 module.exports = app;
